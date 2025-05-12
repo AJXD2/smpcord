@@ -20,7 +20,7 @@ A modular, TypeScript-friendly Discord bot using Bun, discord.js, and Zod.
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/smpcord.git
+   git clone https://github.com/ajxd2/smpcord.git
    cd smpcord
    ```
 
