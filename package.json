@@ -1,0 +1,36 @@
+{
+  "name": "smpcord",
+  "version": "1.0.0",
+  "description": "Discord.js bot with TypeScript and Zod",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir ./dist",
+    "deploy": "bun run src/deploy-commands.ts",
+    "lint": "eslint . --ext .ts",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:up": "drizzle-kit up",
+    "db:down": "drizzle-kit down",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "pg": "^8.15.6",
+    "postgres": "^3.4.5",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^20.10.4",
+    "@types/pg": "^8.15.1",
+    "bun-types": "^1.2.12",
+    "drizzle-kit": "^0.31.1",
+    "tsx": "^4.19.4",
+    "typescript": "^5.3.3"
+  }
+}
