@@ -1,9 +1,4 @@
-import {
-  MessageFlags,
-  PermissionsBitField,
-  SlashCommandBuilder,
-  TextDisplayBuilder,
-} from "discord.js";
+import { PermissionsBitField, SlashCommandBuilder } from "discord.js";
 import type { Command } from "../types";
 
 const command: Command = {
@@ -15,22 +10,12 @@ const command: Command = {
   ephemeral: true,
   execute: async (interaction) => {
     const sent = await interaction.editReply({
-      flags: MessageFlags.IsComponentsV2,
-      components: [
-        new TextDisplayBuilder({
-          content: "Pinging...",
-        }),
-      ],
+      content: "Pinging...",
     });
     const latency = sent.createdTimestamp - interaction.createdTimestamp;
 
     await interaction.editReply({
-      flags: MessageFlags.IsComponentsV2,
-      components: [
-        new TextDisplayBuilder({
-          content: `Pong! Bot latency: ${latency}ms | API Latency: ${interaction.client.ws.ping}ms`,
-        }),
-      ],
+      content: `Pong! Bot latency: ${latency}ms | API Latency: ${interaction.client.ws.ping}ms`,
     });
   },
 };

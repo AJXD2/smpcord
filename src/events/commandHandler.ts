@@ -29,7 +29,7 @@ const event: Event<Events.InteractionCreate> = {
         const seconds = Math.ceil(timeLeft / 1000);
         return interaction.reply({
           content: `Please wait ${seconds} seconds before using this command again.`,
-          ephemeral: true,
+          flags: MessageFlags.Ephemeral,
         });
       }
     }
@@ -63,7 +63,7 @@ const event: Event<Events.InteractionCreate> = {
           }
           return interaction.followUp({
             content: "You do not have permission to use this command.",
-            ephemeral: true,
+            flags: MessageFlags.Ephemeral,
           });
         }
       }
@@ -84,7 +84,7 @@ const event: Event<Events.InteractionCreate> = {
       } else {
         await interaction.followUp({
           content: "There was an error while executing this command!",
-          ephemeral: true,
+          flags: MessageFlags.Ephemeral,
         });
       }
     }
