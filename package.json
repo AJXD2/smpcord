@@ -22,7 +22,7 @@
     "drizzle-orm": "^0.43.1",
     "pg": "^8.15.6",
     "postgres": "^3.4.5",
-    "zod": "^3.24.4"
+    "zod": "^3.25.64"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
